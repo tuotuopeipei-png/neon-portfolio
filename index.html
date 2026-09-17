@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="一组以霓虹、火焰、暗场与蓝色人影为核心视觉的个人作品集网站。"
+    />
+    <title>Visual Portfolio / Motion Works</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <canvas class="ambient-canvas" aria-hidden="true"></canvas>
+    <div class="backdrop" aria-hidden="true">
+      <span class="backdrop__glow backdrop__glow--green"></span>
+      <span class="backdrop__glow backdrop__glow--blue"></span>
+      <span class="backdrop__scan"></span>
+    </div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <div class="intro" aria-label="页面加载中">
+      <div class="intro__media" aria-hidden="true">
+        <img src="assets/work-body-know.webp" alt="" />
+        <img src="assets/flame-alpha.webp" alt="" />
+      </div>
+      <div class="intro__top">
+        <span>VISUAL ARCHIVE / 2026</span>
+        <span>SCROLL TO PLAY</span>
+      </div>
+      <div class="intro__center">
+        <p class="intro__eyebrow">Loading real works</p>
+        <h1 class="intro__name">
+          <span>BODY</span>
+          <span>KNOW</span>
+        </h1>
+      </div>
+      <div class="intro__bottom">
+        <span>Rendering motion background</span>
+        <div class="intro__progress"><i></i></div>
+        <strong class="intro__count">00</strong>
+      </div>
+      <button class="intro__skip" type="button">跳过动画</button>
+    </div>
+
+    <header class="site-header">
+      <a class="brand magnetic" href="#top" aria-label="返回首页">
+        <span>VFX</span>
+        <i></i>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#reel">播放</a>
+        <a href="#work">作品</a>
+        <a href="#profile">说明</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a class="availability magnetic" href="mailto:hello@portfolio.work">
+        <i></i>
+        <span>Selected Works</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">视觉合成 / 动态装置 / 霓虹暗场</p>
+          <h1 class="hero__title" aria-label="Neon works in motion">
+            <span class="title-line"><i>NEON</i></span>
+            <span class="title-line title-line--offset"><i>WORKS</i></span>
+            <span class="title-line title-line--accent"><i>IN MOTION</i></span>
+          </h1>
+        </div>
+
+        <div class="hero__panel reveal">
+          <div class="hero__slides" aria-label="作品预览">
+            <img class="is-active" src="assets/work-body-know.webp" alt="BODY KNOW 绿色火焰圆形视觉" />
+            <img src="assets/work-neon-car.webp" alt="绿色火焰汽车场景" />
+            <img src="assets/work-blue-strip-a.webp" alt="蓝色人影长幅作品" />
+          </div>
+          <div class="hero__panel-meta">
+            <span>LIVE PREVIEW</span>
+            <b data-hero-index>01</b>
+          </div>
+        </div>
+
+        <div class="hero__footer reveal">
+          <p>
+            我把你的作品重新编排成暗色高级视觉系统：
+            进入页面有动态背景，向下滚动时作品会像影像展一样连续播放。
+          </p>
+          <a class="scroll-cue magnetic" href="#reel">
+            <span>开始播放</span>
+            <b>↓</b>
+          </a>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="视觉关键词">
+        <div class="ticker__track">
+          <span>NEON GREEN</span><i></i>
+          <span>BLUE SHADOWS</span><i></i>
+          <span>FLAME ELEMENTS</span><i></i>
+          <span>DARK UI</span><i></i>
+          <span>SCROLL CINEMA</span><i></i>
+          <span>NEON GREEN</span><i></i>
+          <span>BLUE SHADOWS</span><i></i>
+          <span>FLAME ELEMENTS</span><i></i>
+          <span>DARK UI</span><i></i>
+          <span>SCROLL CINEMA</span><i></i>
+        </div>
+      </section>
+
+      <section class="reel section-pad" id="reel">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">01</span>
+            <p>自动滚动播放</p>
+          </div>
+          <p class="section-note">你的作品以横向展映方式循环播放</p>
+          <p class="section-count">07 WORKS</p>
+        </div>
+
+        <div class="reel__viewport reveal-card">
+          <div class="reel__track" aria-label="循环作品播放">
+            <figure class="reel-card reel-card--wide">
+              <img src="assets/work-blue-strip-a.webp" alt="蓝色人影长幅作品 A" />
+              <figcaption><b>01</b><span>Blue Silhouette / Long Frame</span></figcaption>
+            </figure>
+            <figure class="reel-card">
+              <img src="assets/work-body-know.webp" alt="BODY KNOW 绿色火焰圆形作品" />
+              <figcaption><b>02</b><span>Body Know / Fire Ring</span></figcaption>
+            </figure>
+            <figure class="reel-card">
+              <img src="assets/work-neon-car.webp" alt="绿色火焰汽车作品" />
+              <figcaption><b>03</b><span>No Trespassing / Neon Scene</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide">
+              <img src="assets/work-blue-strip-b.webp" alt="蓝色人影长幅作品 B" />
+              <figcaption><b>04</b><span>Blue Corridor / Motion Study</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--flame">
+              <img src="assets/flame-alpha.webp" alt="火焰装饰元素" />
+              <figcaption><b>05</b><span>Flame Element / Overlay Asset</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide">
+              <img src="assets/work-blue-strip-c.webp" alt="蓝色人影长幅作品 C" />
+              <figcaption><b>06</b><span>Blue Presence / Wide Strip</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide">
+              <img src="assets/work-blue-strip-green.webp" alt="裁剪后的蓝色人影作品" />
+              <figcaption><b>07</b><span>Blue Installation / Clean Crop</span></figcaption>
+            </figure>
+
+            <figure class="reel-card reel-card--wide" aria-hidden="true">
+              <img src="assets/work-blue-strip-a.webp" alt="" />
+              <figcaption><b>01</b><span>Blue Silhouette / Long Frame</span></figcaption>
+            </figure>
+            <figure class="reel-card" aria-hidden="true">
+              <img src="assets/work-body-know.webp" alt="" />
+              <figcaption><b>02</b><span>Body Know / Fire Ring</span></figcaption>
+            </figure>
+            <figure class="reel-card" aria-hidden="true">
+              <img src="assets/work-neon-car.webp" alt="" />
+              <figcaption><b>03</b><span>No Trespassing / Neon Scene</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide" aria-hidden="true">
+              <img src="assets/work-blue-strip-b.webp" alt="" />
+              <figcaption><b>04</b><span>Blue Corridor / Motion Study</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--flame" aria-hidden="true">
+              <img src="assets/flame-alpha.webp" alt="" />
+              <figcaption><b>05</b><span>Flame Element / Overlay Asset</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide" aria-hidden="true">
+              <img src="assets/work-blue-strip-c.webp" alt="" />
+              <figcaption><b>06</b><span>Blue Presence / Wide Strip</span></figcaption>
+            </figure>
+            <figure class="reel-card reel-card--wide" aria-hidden="true">
+              <img src="assets/work-blue-strip-green.webp" alt="" />
+              <figcaption><b>07</b><span>Blue Installation / Clean Crop</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="scroll-play" id="work">
+        <div class="scroll-play__sticky">
+          <div class="section-head reveal">
+            <div>
+              <span class="section-index">02</span>
+              <p>滚动播放</p>
+            </div>
+            <p class="section-note">向下滚动，作品会逐张推进</p>
+            <p class="section-count"><span data-scroll-count>01</span> / 06</p>
+          </div>
+
+          <div class="cinema">
+            <div class="cinema__side">
+              <p>SCROLL PLAYBACK</p>
+              <h2>像看一条动态片段一样浏览作品。</h2>
+              <div class="cinema__progress"><i data-cinema-progress></i></div>
+            </div>
+
+            <div class="cinema__viewport" data-cinema-viewport>
+              <div class="cinema__track" data-cinema-track>
+                <article class="cinema-card">
+                  <img src="assets/work-body-know.webp" alt="BODY KNOW 绿色火焰圆形作品" />
+                  <div><span>01</span><h3>BODY KNOW</h3><p>绿色火焰、金属圆环与网格质感。</p></div>
+                </article>
+                <article class="cinema-card cinema-card--wide">
+                  <img src="assets/work-blue-strip-a.webp" alt="蓝色人影长幅作品" />
+                  <div><span>02</span><h3>BLUE SILHOUETTE</h3><p>蓝色暗场里的长幅人物影像。</p></div>
+                </article>
+                <article class="cinema-card">
+                  <img src="assets/work-neon-car.webp" alt="绿色火焰汽车作品" />
+                  <div><span>03</span><h3>NO TRESPASSING</h3><p>高对比绿火场景，适合做主视觉海报。</p></div>
+                </article>
+                <article class="cinema-card cinema-card--wide">
+                  <img src="assets/work-blue-strip-b.webp" alt="蓝色人影长幅作品 B" />
+                  <div><span>04</span><h3>BLUE CORRIDOR</h3><p>冷光、空间、人群剪影的横向叙事。</p></div>
+                </article>
+                <article class="cinema-card cinema-card--flame">
+                  <img src="assets/flame-alpha.webp" alt="火焰装饰元素" />
+                  <div><span>05</span><h3>FLAME ASSET</h3><p>可叠加在海报和动态开场中的火焰元素。</p></div>
+                </article>
+                <article class="cinema-card cinema-card--wide">
+                  <img src="assets/work-blue-strip-green.webp" alt="裁剪后的蓝色人影长幅作品" />
+                  <div><span>06</span><h3>INSTALLATION STRIP</h3><p>已清理绿幕边缘，用于网页展映。</p></div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile section-pad" id="profile">
+        <div class="section-head reveal">
+          <div>
+            <span class="section-index">03</span>
+            <p>视觉方向</p>
+          </div>
+          <p class="section-note">更高级的暗色 UI 与动态背景系统</p>
+          <p class="section-count">DESIGN SYSTEM</p>
+        </div>
+
+        <div class="profile__grid">
+          <div class="profile__statement reveal">
+            <p>
+              页面现在以黑色玻璃质感、冷蓝光场和酸性绿色作为主视觉，
+              配合扫描线、粒子背景和火焰叠层，让你的作品本身成为网站的主角。
+            </p>
+          </div>
+          <div class="profile__cards">
+            <article class="metric reveal-card">
+              <span>01</span>
+              <h3>动态背景</h3>
+              <p>Canvas 光点、扫描线、渐变光晕持续运动。</p>
+            </article>
+            <article class="metric reveal-card">
+              <span>02</span>
+              <h3>作品播放</h3>
+              <p>横向自动循环，加上滚动驱动的作品推进。</p>
+            </article>
+            <article class="metric reveal-card">
+              <span>03</span>
+              <h3>高级 UI</h3>
+              <p>暗色玻璃、细线边框、霓虹高光和大字号标题。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section-pad" id="contact">
+        <img class="contact__flame" src="assets/flame-alpha.webp" alt="" aria-hidden="true" />
+        <p class="eyebrow reveal">Portfolio ready for next edit</p>
+        <h2 class="reveal">KEEP<br /><em>SCROLLING</em>.</h2>
+        <a class="contact__link magnetic reveal" href="mailto:hello@portfolio.work">
+          hello@portfolio.work
+          <span>↗</span>
+        </a>
+        <footer>
+          <span>© <b data-year>2026</b> VISUAL PORTFOLIO</span>
+          <div>
+            <a href="#reel">REEL</a>
+            <a href="#work">WORKS</a>
+            <a href="#top">TOP</a>
+          </div>
+          <a href="#top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>
+
